@@ -132,7 +132,7 @@ class App extends Component {
         <h1>Hi I&apos;m a React App. Yea yea</h1>
         < p className = {
           assignClasses.join(' ')
-        } > This is really working! < /p>
+        } > This is really working! </p>
         <button
           style = {
             style
