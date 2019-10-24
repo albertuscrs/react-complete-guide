@@ -28,10 +28,10 @@ const cockpit = (props) => {
   if(props.showPersons){
     btnClass = classes.Red;
   }
-  if (props.persons.length <= 2) {
+  if (props.personsLength <= 2) {
     assignClasses.push(classes.red); // classes = ['red']
   }
-  if (props.persons.length <= 1) {
+  if (props.personsLength <= 1) {
     assignClasses.push(classes.bold); // classes = ['red', 'bold']
   }
   return (
@@ -53,7 +53,8 @@ const cockpit = (props) => {
 cockpit.propTypes = {
   showPersons: PropTypes.bool,
   persons: PropTypes.array,
-  clicked: PropTypes.func
+  clicked: PropTypes.func,
+  personsLength: PropTypes.number
 }
 
-export default cockpit;
+export default React.memo(cockpit); //react memoization
