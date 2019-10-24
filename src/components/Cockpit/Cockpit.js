@@ -6,11 +6,10 @@ const cockpit = (props) => {
   useEffect(() => { //runs for every update
     console.log('[Cockpit.js] useEffect');
     // Http request...
-    const timer = setTimeout(() => {
+    setTimeout(() => {
       alert('Saved data to cloud!');
     }, 1000);
     return () => {
-      clearTimeout(timer);
       console.log('[Cockpit.js] clean up work in useEffect');
     }
   }, []); // [] untuk nentuin kapan useEffect kerja, kalau kosong itu kerjanya diawal pas render, bisa banyak soalnya dia array tergantung kebutuhan
