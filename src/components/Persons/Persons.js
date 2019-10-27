@@ -2,7 +2,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Person from './Person/Person'
-
 class Persons extends PureComponent { // punya sendiri caranya untuk cek semua components yang ganti
   // static getDerivedStateFromProps(props, state){
   //   console.log('[Persons.js] getDerivedStateFromProps');
@@ -63,7 +62,8 @@ class Persons extends PureComponent { // punya sendiri caranya untuk cek semua c
 Persons.propTypes = {
   persons: PropTypes.array,
   clicked: PropTypes.func,
-  changed: PropTypes.func
+  changed: PropTypes.func,
+  isAuthenticated: PropTypes.bool
 }
 
 export default Persons;
